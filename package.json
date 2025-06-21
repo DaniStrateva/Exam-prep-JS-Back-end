@@ -4,7 +4,7 @@
   "description": "JS Back-end initial",
   "main": "index.js",
   "scripts": {
-    "dev":"node --watch src/index.js"
+    "dev": "node --watch src/index.js"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type":"module",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/DaniStrateva/Exam-prep-JS-Back-end/issues"
   },
-  "homepage": "https://github.com/DaniStrateva/Exam-prep-JS-Back-end#readme"
+  "homepage": "https://github.com/DaniStrateva/Exam-prep-JS-Back-end#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }

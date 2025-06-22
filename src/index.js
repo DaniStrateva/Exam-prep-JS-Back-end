@@ -12,9 +12,15 @@ app.use(express.static('src/public'));
 app.use(express.urlencoded());
 
 //configure handlebars as view engine
-app.engine('hbs',handlebars.engine({}))
+app.engine('hbs',handlebars.engine({
+    extname:'hbs',
+}))
 
 //set handlebars as default engine
+app.set('view engine', 'hbs');
+
+//change default views directory
+app.set('views','src/views');
 
 //add routes
 app.use(routes);

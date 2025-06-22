@@ -14,6 +14,10 @@ app.use(express.urlencoded());
 //configure handlebars as view engine
 app.engine('hbs',handlebars.engine({
     extname:'hbs',
+    runtimeOptions:{
+        allowProtoMethodsByDefault: true,
+        allowProtoPropertiesByDefault: true,
+    }
 }))
 
 //set handlebars as default engine

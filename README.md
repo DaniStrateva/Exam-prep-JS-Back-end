@@ -36,4 +36,5 @@
     5.4 Add user controller  
     5.5 Add register page  
     5.6 Modify register form  
-    5.7 
+    5.7 Create post action in userController  
+    5.8

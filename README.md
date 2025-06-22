@@ -12,6 +12,6 @@
     2.3 Add public resources   
     2.4 Setup static folder  
     2.5 Add body parser middleware 
-    2.6 Setup routes file (modular router)  
-    2.7 Add home controller  
+    2.6 Add home controller    
+    2.7 Setup routes file (modular router)  
 3.  

@@ -41,4 +41,14 @@
     5.9 Hash password  
     5.10 Check rePassword if correct  
     5.11 Check if user exists before register  
-    5.13 Register user
+    5.13 Register user  
+6. Login  
+    6.1 Add jsonwebtoken 'npm i jsonwebtoken'  
+    6.2 Add cookie parser 'npm i cookie-parser'  
+    6.4 Use cookie parser middleware  
+    6.5 Add login view  
+    6.6 Fix login form  
+    6.7 Add login page  
+    6.8 Add login post action  
+    6.9 Add login method to userService  
+    6.10

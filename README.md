@@ -51,4 +51,9 @@
     6.7 Add login page  
     6.8 Add login post action  
     6.9 Add login method to userService  
-    6.10
+    6.10 Validate user on login  
+    6.11 Validate password on login  
+    6.12 Generate jwt token  
+    6.13 Attach token to cookie  
+    6.14 Login user  
+    6.15 Auto login on register

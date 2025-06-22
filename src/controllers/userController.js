@@ -12,12 +12,20 @@ userController.post('/register',async (req,res)=>{
 //have to add error handling later
 
         await userService.register(userData);
-        res.redirect("/");
+        res.redirect("/users/login");
      
 });
 
 userController.get('/login',(req,res)=>{
     res.render('user/login');
-})
+});
+
+userController.post('/login',async(req,res)=>{
+    const loginData = req.body;
+
+    //call userService.login
+
+    res.redirect('/');
+});
 
 export default userController;

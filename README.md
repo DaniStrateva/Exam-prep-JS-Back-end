@@ -29,4 +29,4 @@
     4.2 Set up db connection  
     4.3 Set up db connection error handling  
     4.4 Add basic user model  
-    
+5. 

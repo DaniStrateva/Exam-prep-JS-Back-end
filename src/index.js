@@ -1,6 +1,7 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
 import initDatabase from './config/dbConfig.js';
+import routes from './routes.js';
 
 
 //init express

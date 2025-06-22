@@ -2,6 +2,7 @@ import User from "../models/User.js"
 import bcrypt from 'bcrypt'
 import jsonwebtoken from 'jsonwebtoken'
 import { JWT_SECRET } from "../config/index.js";
+import { generateToken } from "../utils/userUtils.js";
 
 export default{
     async register(userData){
@@ -34,13 +35,8 @@ export default{
             throw new Error('Invalid user or password!')
         }
 
-        //generate token
-        const payload = {
-            id: user.id,
-            username,
-        }
-        const token = jsonwebtoken.sign(payload, JWT_SECRET, {expiresIn: '2h'});
-
+        const token = generateToken(user);
         return token;
     },
 }
+

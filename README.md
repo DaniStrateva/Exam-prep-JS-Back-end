@@ -41,4 +41,4 @@
     5.9 Hash password  
     5.10 Check rePassword if correct  
     5.11 Check if user exists before register  
-    5.12 Register user
+    5.13 Register user

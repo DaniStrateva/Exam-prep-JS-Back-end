@@ -23,4 +23,10 @@
     3.6 Add home view  
     3.7 Add layout  
     3.8 Add partials directory  
-    3.9 Configure handlebars to read mongoose docs
+    3.9 Configure handlebars to read mongoose docs  
+4.  Database  
+    4.1 Install mongoose 'npm i mongoose'   
+    4.2 Set up db connection  
+    4.3 Set up db connection error handling  
+    4.4 Add basic user model  
+    

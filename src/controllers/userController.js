@@ -21,9 +21,13 @@ userController.get('/login',(req,res)=>{
 });
 
 userController.post('/login',async(req,res)=>{
-    const loginData = req.body;
+    const {username, password} = req.body;
 
     //call userService.login
+    const token = await userService.login(username, password);
+    
+    //attach token to cookie
+    res.cookie('auth', token);
 
     res.redirect('/');
 });

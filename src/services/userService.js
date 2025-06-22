@@ -39,6 +39,8 @@ export default{
             id: user.id,
             username,
         }
-        const token = jsonwebtoken.sign(payload, JWT_SECRET, {expiresIn: '2h'})
+        const token = jsonwebtoken.sign(payload, JWT_SECRET, {expiresIn: '2h'});
+
+        return token;
     },
 }

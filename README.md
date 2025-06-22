@@ -58,4 +58,12 @@
     6.14 Login user  
     6.15 Auto login on register  
 7. Logout  
-    7.1 Add logout action
+    7.1 Add logout action  
+8. Authentication  
+    8.1 Auth middleware  
+    8.2 Get token  
+    8.3 Check if guest  
+    8.4 Verify token if not guest  
+    8.5 Attach user to request  
+    8.6 Attach user data to handlebars context  
+    8.7 Use auth middleware

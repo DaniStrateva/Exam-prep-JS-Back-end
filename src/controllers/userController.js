@@ -1,5 +1,6 @@
 import {Router} from "express";
 import userService from "../services/userService.js";
+import { AUTH_COOKIE_NAME } from "../config/index.js";
 
 const userController = Router();
 
@@ -14,7 +15,7 @@ userController.post('/register',async (req,res)=>{
         //register user
         const token = await userService.register(userData);
         //attach token to cookie
-        res.cookie('auth',token);
+        res.cookie(AUTH_COOKIE_NAME,token);
 
         //redirect to home page
         res.redirect("/");
@@ -32,14 +33,14 @@ userController.post('/login',async(req,res)=>{
     const token = await userService.login(username, password);
     
     //attach token to cookie
-    res.cookie('auth', token);
+    res.cookie(AUTH_COOKIE_NAME, token);
 
     res.redirect('/');
 });
 
 userController.get('/logout',(req,res)=>{
     //have to delete cookie from user session
-    res.clearCookie('auth');
+    res.clearCookie(AUTH_COOKIE_NAME);
 
     res.redirect('/');
 })

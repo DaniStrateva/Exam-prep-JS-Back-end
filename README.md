@@ -29,4 +29,11 @@
     4.2 Set up db connection  
     4.3 Set up db connection error handling  
     4.4 Add basic user model  
-5. 
+5. Registration  
+    5.1 Install bcrypt for passwords 'npm i bcrypt'  
+    5.2 Fix navigation links  
+    5.3 Add register view  
+    5.4 Add user controller  
+    5.5 Add register page  
+    5.6 Modify register form  
+    5.7 

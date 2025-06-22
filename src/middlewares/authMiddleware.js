@@ -13,6 +13,13 @@ export function auth(req,res,next){
     //validate token
     try{
         const user = jsonwebtoken.verify(token,JWT_SECRET);
+
+        req.user = user;
+        res.locals.user = user;
+        res.locals.isAuthenticated = true;
+
+        next();
+
     }catch(err){
         res.clearCookie(AUTH_COOKIE_NAME);
 

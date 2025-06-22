@@ -70,4 +70,9 @@
 9. Authorization  
     9.1 Create isAuth middleware  
     9.2 Create isGuest middleware  
-    9.3 Add route guards
+    9.3 Add route guards  
+10.Error Handling  
+    11.1 Add notifications  
+    11.2 Error message in notification  
+    11.3 Add error handling for register  
+    11.4 Add error handling for login

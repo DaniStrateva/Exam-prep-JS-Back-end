@@ -3,6 +3,7 @@ import userService from "../services/userService.js";
 import { AUTH_COOKIE_NAME } from "../config/index.js";
 import { isGuest } from "../middlewares/authMiddleware.js";
 import { isAuth } from "../middlewares/authMiddleware.js";
+import { getErrorMessage } from "../utils/errorUtils.js";
 
 const userController = Router();
 
@@ -12,8 +13,8 @@ userController.get('/register',isGuest,(req,res)=>{
 
 userController.post('/register',isGuest,async (req,res)=>{
     const userData = req.body;
-//have to add error handling later
-
+    //add error handling
+    try{
         //register user
         const token = await userService.register(userData);
         //attach token to cookie
@@ -21,6 +22,12 @@ userController.post('/register',isGuest,async (req,res)=>{
 
         //redirect to home page
         res.redirect("/");
+    }catch(err){
+        res.render('user/register',{error: getErrorMessage(err)});
+    }
+
+
+        
      
 });
 

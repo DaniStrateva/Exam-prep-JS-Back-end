@@ -66,4 +66,8 @@
     8.4 Verify token if not guest  
     8.5 Attach user to request  
     8.6 Attach user data to handlebars context  
-    8.7 Use auth middleware
+    8.7 Use auth middleware  
+9. Authorization  
+    9.1 Create isAuth middleware  
+    9.2 Create isGuest middleware  
+    9.3 Add route guards

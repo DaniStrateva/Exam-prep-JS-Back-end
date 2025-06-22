@@ -15,6 +15,7 @@ export function auth(req,res,next){
         const user = jsonwebtoken.verify(token,JWT_SECRET);
 
         req.user = user;
+        req.isAuthenticated=true;
         res.locals.user = user;
         res.locals.isAuthenticated = true;
 
@@ -26,4 +27,18 @@ export function auth(req,res,next){
         res.redirect('/users/login');
     }
     
+}
+
+export function isAuth(req,res,next){
+    if(!req.isAuthenticated){
+        return res.redirect('/users/login');
+    }
+    next();
+}
+
+export function isGuest(req,res,next){
+    if(req.isAuthenticated){
+        return res.redirect('/');
+    }
+    next();
 }

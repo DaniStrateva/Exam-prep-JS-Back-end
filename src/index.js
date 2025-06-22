@@ -2,6 +2,7 @@ import express from 'express';
 import handlebars from 'express-handlebars';
 import initDatabase from './config/dbConfig.js';
 import routes from './routes.js';
+import cookieParser from 'cookie-parser';
 
 
 //init express
@@ -12,6 +13,9 @@ initDatabase();
 
 //setup static middleware
 app.use(express.static('src/public'));
+
+//use cookie-parser
+app.use(cookieParser());
 
 //use body parser
 app.use(express.urlencoded());

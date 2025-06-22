@@ -23,12 +23,9 @@ userController.post('/register',isGuest,async (req,res)=>{
         //redirect to home page
         res.redirect("/");
     }catch(err){
-        res.render('user/register',{error: getErrorMessage(err)});
+        res.render('user/register',{error: getErrorMessage(err), user: userData});
     }
-
-
-        
-     
+   
 });
 
 userController.get('/login',isGuest,(req,res)=>{

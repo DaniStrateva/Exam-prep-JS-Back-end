@@ -1,9 +1,13 @@
 import express from 'express';
 
+
 const app = express();
 
 //setup static middleware
 app.use(express.static('src/public'));
+
+//use body parser
+app.use()
 
 app.get('/',(req,res)=>{
     res.send('It works')

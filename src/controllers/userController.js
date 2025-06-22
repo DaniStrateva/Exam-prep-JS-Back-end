@@ -1,14 +1,16 @@
 import {Router} from "express";
 import userService from "../services/userService.js";
 import { AUTH_COOKIE_NAME } from "../config/index.js";
+import { isGuest } from "../middlewares/authMiddleware.js";
+import { isAuth } from "../middlewares/authMiddleware.js";
 
 const userController = Router();
 
-userController.get('/register',(req,res)=>{
+userController.get('/register',isGuest,(req,res)=>{
     res.render('user/register');
 });
 
-userController.post('/register',async (req,res)=>{
+userController.post('/register',isGuest,async (req,res)=>{
     const userData = req.body;
 //have to add error handling later
 
@@ -22,11 +24,11 @@ userController.post('/register',async (req,res)=>{
      
 });
 
-userController.get('/login',(req,res)=>{
+userController.get('/login',isGuest,(req,res)=>{
     res.render('user/login');
 });
 
-userController.post('/login',async(req,res)=>{
+userController.post('/login',isAuth, async(req,res)=>{
     const {username, password} = req.body;
 
     //call userService.login
@@ -38,7 +40,7 @@ userController.post('/login',async(req,res)=>{
     res.redirect('/');
 });
 
-userController.get('/logout',(req,res)=>{
+userController.get('/logout',isAuth,(req,res)=>{
     //have to delete cookie from user session
     res.clearCookie(AUTH_COOKIE_NAME);
 

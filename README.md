@@ -37,4 +37,8 @@
     5.5 Add register page  
     5.6 Modify register form  
     5.7 Create post action in userController  
-    5.8
+    5.8 Add user service with register  
+    5.9 Hash password  
+    5.10 Check rePassword if correct  
+    5.11 Check if user exists before register  
+    5.12 Register user

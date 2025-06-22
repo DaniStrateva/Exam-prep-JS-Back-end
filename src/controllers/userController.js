@@ -11,8 +11,13 @@ userController.post('/register',async (req,res)=>{
     const userData = req.body;
 //have to add error handling later
 
-        await userService.register(userData);
-        res.redirect("/users/login");
+        //register user
+        const token = await userService.register(userData);
+        //attach token to cookie
+        res.cookie('auth',token);
+
+        //redirect to home page
+        res.redirect("/");
      
 });
 
@@ -31,5 +36,12 @@ userController.post('/login',async(req,res)=>{
 
     res.redirect('/');
 });
+
+userController.get('/logout',(req,res)=>{
+    //have to delete cookie from user session
+    res.clearCookie('auth');
+
+    res.redirect('/');
+})
 
 export default userController;

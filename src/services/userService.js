@@ -18,7 +18,9 @@ export default{
             throw new Error('User already exists');
         }
 
-        return User.create(userData);
+        const newUser = await User.create(userData);
+        const token = generateToken(newUser);
+        return token;
     },
     async login(username, password){
         //validate user 

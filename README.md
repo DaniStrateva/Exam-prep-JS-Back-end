@@ -56,4 +56,6 @@
     6.12 Generate jwt token  
     6.13 Attach token to cookie  
     6.14 Login user  
-    6.15 Auto login on register
+    6.15 Auto login on register  
+7. Logout  
+    7.1 Add logout action
